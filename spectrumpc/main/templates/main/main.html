@@ -2,5 +2,101 @@
 {% load static %}
 {% block title %}SpectrumPC{% endblock  %}
 {% block main %}
-    <h1>Главная</h1>
+    <div class="bg-gray text-white">
+        <div class="d-flex justify-content-center pb-5">
+            <img class="img-fluid" src="{% static 'main/img/main/mainpage.jpg' %}" alt="Hello">
+        </div>
+        <div class="container pb-5">
+            <h2 class="container d-flex justify-content-center pb-2">Услуги компании</h2>
+            <div class="row justify-content-evenly">
+                <div class="col d-flex align-items-center flex-column pb-4">
+                    <img width="100" src="{% static 'main/img/main/icon-1.svg' %}">
+                    <h4>Сборка компьютеров</h4>
+                    <span class="text-align-justify" style="width: 300px;">Если вы совсем неопытный пользователь, наша компания поможет и собрет компьютер за вас.
+                        У нас большая и опытная компания с сотрудниками вышего класса, которые справляются с этим за считанные секунды.
+                    </span>
+                </div>
+                <div class="col d-flex align-items-center flex-column pb-4">
+                    <img width="100" src="{% static 'main/img/main/icon-2.svg' %}">
+                    <h4>Установка программ</h4>
+                    <span class="text-align-justify" style="width: 300px;">После сборки компьютера, наш специалист ПО установит лицензированные программы и настроит всё для дальнейшего 
+                        пользования. (Photoshop, Illustrator, Browser, Game и тд.)
+                    </span>
+                </div>
+                <div class="col d-flex align-items-center flex-column pb-4">
+                    <img width="100" src="{% static 'main/img/main/icon-3.svg' %}">
+                    <h4>Обслуживание ПК</h4>
+                    <span class="text-align-justify" style="width: 300px;">Купив компьютер именно у нас, к нему в пакет включена доставка и подключение компьютера у вас дома.
+                        (Вы можете отменить эту функцию) Так же вы можете обратиться к нам за чисткой и обслуживание пк через время.
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container d-flex flex-column pb-5 pt-3">
+            <h2 class="container d-flex justify-content-center pb-3">Наши клиенты</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col pb-3 d-flex flex-column align-items-center">
+                        <img class="border-radius" src="{% static 'main/img/main/youtube/kupa.jpg' %}" alt="">
+                        <h5 class="pt-3">Kuplinov</h5>
+                        <span class="text-muted">YouTube</span>                        
+                    </div>
+                    <div class="col pb-3 d-flex flex-column align-items-center">
+                        <img class="border-radius" src="{% static 'main/img/main/youtube/fad.jpg' %}" alt="">
+                        <h5 class="pt-3">Faded</h5>
+                        <span class="text-muted">YouTube</span>
+                    </div>
+                    <div class="col pb-3 d-flex flex-column align-items-center">
+                        <img class="border-radius" src="{% static 'main/img/main/youtube/joe.jpg' %}" alt="">
+                        <h5 class="pt-3">JoeSpeen</h5>
+                        <span class="text-muted">YouTube</span>
+                    </div>
+                    <div class="col pb-3 d-flex flex-column align-items-center">
+                        <img class="border-radius" src="{% static 'main/img/main/youtube/cheez.jpg' %}" alt="">
+                        <h5 class="pt-3">CheZee</h5>
+                        <span class="text-muted">YouTube</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-flex flex-column pb-5 pt-5">
+            <h2 class="container d-flex justify-content-center pb-3">Наши партнеры</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col d-flex justify-content-center pb-3">
+                        <img height="60" src="{% static 'main/img/main/companyLogo/msi.svg' %}" alt="msi">
+                    </div>
+                    <div class="col d-flex justify-content-center pb-3">
+                        <img height="60" src="{% static 'main/img/main/companyLogo/asus.svg' %}" alt="asus">
+                    </div>
+                    <div class="col d-flex justify-content-center pb-3">
+                        <img height="60" src="{% static 'main/img/main/companyLogo/ryzen.png' %}" alt="ryzen">
+                    </div>
+                    <div class="col d-flex justify-content-center pb-3">
+                        <img height="60" src="{% static 'main/img/main/companyLogo/intel.png' %}" alt="intel">
+                    </div>
+                    <div class="col d-flex justify-content-center pb-3">
+                        <img height="60" src="{% static 'main/img/main/companyLogo/aerocool.png' %}" alt="aerocool">
+                    </div>
+                    <div class="col d-flex justify-content-center pb-3">
+                        <img height="60" src="{% static 'main/img/main/companyLogo/gigabyte.png' %}" alt="gigabyte">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-flex align-items-center flex-column pb-3 pt-5">
+            <h2 class="pb-2">Статьи каждую неделю</h2>
+            <span class="pb-3 text-muted">Больше 90% наших клиентов получают интересные статьи каждую неделю</span>
+            <form class="d-flex flex-column align-items-center" method="post">
+                {% csrf_token %}
+                <div class="pb-2">
+                    {{ form.mail }}
+                </div>
+                <button type="submit" class="btn btn-outline-light">Подписаться</button>
+            </form>
+        </div>
+    </div>
 {% endblock  %}

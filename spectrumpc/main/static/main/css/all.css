@@ -1,3 +1,6 @@
-main{
-    background-color: blue;
+.bg-gray{
+    background-color: rgb(37, 37, 37);
+}
+.text-align-justify{
+    text-align: justify;
 }
