@@ -6,7 +6,7 @@ from django.views.static import serve
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
-    path('product', include('computer.urls')),
+    path('product/', include('computer.urls')),
 ]
 
 if settings.DEBUG:

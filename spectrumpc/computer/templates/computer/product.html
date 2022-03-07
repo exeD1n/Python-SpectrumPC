@@ -2,10 +2,19 @@
 {% load static %}
 {% block title %}SpectrumPC продукция{% endblock  %}
 {% block main %}
-    <div class="bg-dark">
-        <div class="container">
-            <a href="{% url 'computer' %}"><img src="" alt=""></a>
-            <a href="{% url 'periphery' %}"><img src="" alt=""></a>
+    <div class="bg-dark text-white pb-5">
+        <h2 class="text-white d-flex justify-content-center pt-5 pb-5">Наша продукция</h2>
+        <div class="container-sm pb-5">
+            <div class="row">
+                <div class="col d-flex align-items-center flex-column">
+                    <h4 class="pb-3">Компьютеры</h4>
+                    <a href="{% url 'computer' %}"><img class="img-fluid" src="{% static 'main/img/product/computer.jpg' %}" alt="computer"></a>
+                </div>
+                <div class="col d-flex align-items-center flex-column">
+                    <h4 class="pb-3">Периферия</h4>
+                    <a href="{% url 'periphery' %}"><img class="img-fluid" src="{% static 'main/img/product/periphery.jpg' %}" alt="periphery"></a>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock  %}
