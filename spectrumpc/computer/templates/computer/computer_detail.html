@@ -1,0 +1,26 @@
+{% extends "main/layout.html" %}
+{% load static %}
+{% block title %}Информация о {{ computer.name }} {% endblock  %}
+{% block main %}
+    <div class="bg-dark text-white pb-5">
+        <div class="container">
+            <h2 class="m-0 container d-flex justify-content-center pb-5 pt-5">{{ computer.name }}</h2>
+                <div class=" d-flex flex-column align-items-center">
+                    <img src="{{ computer.img.url }}" class="img-fluid">
+                </div>
+                <div class=" d-flex flex-column align-items-center">
+                    <span>💎 {{ computer.CPU }}</span>
+                    <span>🎛 {{ computer.Motherboard }}</span>
+                    <span>⚙ {{ computer.Cooling }}</span>
+                    <span>💾 {{ computer.RAM }}</span>
+                    <span>📀 {{ computer.SSD }}</span>
+                    <span>💿 {{ computer.HDD }}</span>
+                    <span>🎞 {{ computer.GPU }}</span>
+                    <span>🔌 {{ computer.Power }}</span>
+                    <span>💻 {{ computer.Box }}</span>
+                    <span>🖥 {{ computer.Windows }}</span>
+                    <a href="#" class="btn btn-outline-light">{{ computer.Cost }} руб.</a>
+                </div>
+        </div>
+    </div>
+{% endblock  %}

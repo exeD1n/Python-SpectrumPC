@@ -7,12 +7,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
     path('product/', include('computer.urls')),
-    path('reviews', include('reviews.urls')),
 ]
 
 if settings.DEBUG:
-    urlpatterns += [
-        path('media/<path:path>', serve, {
-            'document_root': settings.MEDIA_ROOT
-        })
-    ]
+    urlpatterns += \
+        [
+            path('media/<path:path>', serve, {
+                'document_root': settings.MEDIA_ROOT
+            })
+        ]

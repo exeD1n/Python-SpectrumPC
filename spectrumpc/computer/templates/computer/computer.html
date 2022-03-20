@@ -2,9 +2,20 @@
 {% load static %}
 {% block title %}Компьютеры{% endblock  %}
 {% block main %}
-    <div class="bg-dark">
+    <div class="bg-dark text-white">
         <div class="container">
-            Компьютеры
+            <h2 class="m-0 container d-flex justify-content-center pb-5 pt-5">Наши компьютеры</h2>
+            <div class="row">
+                {% for el in computer %}
+                <div class="col-sm-4 d-flex flex-column align-items-center pb-5">
+                    <div>
+                        <img class="img-fluid" width="300px" src="{{ el.img.url }}">
+                    </div>
+                    <h6 class="pt-3 mb-0 pb-3">{{ el.name }}</h6>
+                    <a href="{% url 'computerdatail' el.id %}" type="submit" class="btn btn-outline-light">Узнать подробнее</a>
+                </div>
+            {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock  %}

@@ -2,9 +2,21 @@
 {% load static %}
 {% block title %}Периферия{% endblock  %}
 {% block main %}
-    <div class="bg-dark">
+    <div class="bg-dark text-white">
         <div class="container">
-            Периферия
+            <h2 class="m-0 container d-flex justify-content-center pb-5 pt-5">Наша периферия</h2>
+            <div class="row">
+                {% for el in periferia %}
+                    <div class="col-sm-4 pb-5 d-flex flex-column align-items-center">
+                        <div style="height:210px" class="d-flex justify-content-center align-items-center bg-light">
+                            <img class="img-fluid" width="200px" src="{{ el.img.url }}">
+                        </div>
+                        <h6 class="pt-3 mb-0 pb-3">{{el.name}}</h6>
+                        <span class="pb-2">{{ el.title }}</span>
+                        <a href="#" class="btn btn-outline-light">{{ el.Cost }} руб.</a>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock  %}
