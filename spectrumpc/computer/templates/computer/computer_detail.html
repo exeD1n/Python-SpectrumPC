@@ -3,12 +3,13 @@
 {% block title %}Информация о {{ computer.name }} {% endblock  %}
 {% block main %}
     <div class="bg-dark text-white pb-5">
-        <div class="container">
-            <h2 class="m-0 container d-flex justify-content-center pb-5 pt-5">{{ computer.name }}</h2>
+        <div class="container-lg">
+            <div class="container border_info">
+                <h2 class="m-0 container d-flex justify-content-center pb-5 pt-5 ">{{ computer.name }}</h2>
                 <div class="pb-3 d-flex flex-column align-items-center">
-                    <img src="{{ computer.img.url }}" class="img-fluid">
+                    <img src="{{ computer.img.url }}" class="img-fluid border border-dark rounded">
                 </div>
-                <div class=" d-flex flex-column align-items-center">
+                <div class=" d-flex flex-column align-items-center pb-5">
                     <span class="pb-3">💎 {{ computer.CPU }}</span>
                     <span class="pb-3">🎛 {{ computer.Motherboard }}</span>
                     <span class="pb-3">⚙ {{ computer.Cooling }}</span>
@@ -21,6 +22,7 @@
                     <span class="pb-3">🖥 {{ computer.Windows }}</span>
                     <a href="#" class="btn btn-outline-light">{{ computer.Cost }} руб.</a>
                 </div>
+            </div>
         </div>
     </div>
 {% endblock  %}
