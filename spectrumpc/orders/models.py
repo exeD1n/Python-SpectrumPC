@@ -1,6 +1,6 @@
 from django.db import models
 
-class Computer(models.Model):
+class Orders(models.Model):
     name_droduct = models.CharField('Название', max_length=50)
     name_client = models.CharField('ФИО клиента', max_length=100)
     phone = models.CharField('Номер телефона пользователя', max_length=20)
